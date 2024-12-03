@@ -1,0 +1,12 @@
+groups:
+- name: Prometheus_Alerts
+  rules:
+
+  - alert: InstanceDown
+    expr: label_replace(up == 0, "job", "", "job", ".*") == 0
+    for: 5m
+    labels:
+      severity: critical
+    annotations:
+      summary: "🚨 Instance Down Alert (instance {{ $labels.instance }})"
+

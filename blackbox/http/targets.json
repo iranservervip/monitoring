@@ -1,0 +1,8 @@
+[
+  {
+    "targets": ["https://abin.ir"],
+    "labels": {
+      "job": "http targets"
+    }
+  }
+]
