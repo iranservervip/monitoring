@@ -1,0 +1,12 @@
+groups:
+- name: icmp_check
+  rules:
+
+  - alert: InstanceDown
+    expr:  probe_success != 1
+    for: 10s
+    labels:
+      severity: critical
+    annotations:
+      summary: "🚨 Instance Down Alert (instance {{ $labels.instance }})"
+

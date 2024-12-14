@@ -44,9 +44,6 @@ scrape_configs:
     file_sd_configs:
       - files:
           - '/etc/prometheus/http/*.json'
-#    static_configs:
-#      - targets:
-#          - 'https://abin.ir'  # Replace with your web targets
     relabel_configs:
       - source_labels: [__address__]
         target_label: __param_target
@@ -63,12 +60,6 @@ scrape_configs:
     file_sd_configs:
       - files:
           - '/etc/prometheus/icmp/*.json'
-
-#    static_configs:
-#      - targets:
-#          - '65.21.64.22'
-#          - '135.181.129.199'
-#          - '94.182.105.88'
     relabel_configs:
       - source_labels: [__address__]
         target_label: __param_target
@@ -78,5 +69,9 @@ scrape_configs:
         replacement: blackbox-exporter:9115
         
   - job_name: 'windows'
+    file_sd_configs:
+      - files:
+          - '/etc/prometheus/win-exporter/*.json'
+
     static_configs:
       - targets: ['135.181.129.199:9115']

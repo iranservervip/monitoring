@@ -1,0 +1,8 @@
+[
+  {
+    "targets": ["135.181.129.199:9115"],
+    "labels": {
+      "job": "win-exporter targets"
+    }
+  }
+]
