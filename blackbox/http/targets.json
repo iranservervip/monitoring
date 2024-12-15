@@ -1,6 +1,6 @@
 [
   {
-    "targets": ["https://abin.ir"],
+    "targets": ["https://abin.ir","https://mng.abin.ir/"],
     "labels": {
       "job": "http targets"
     }

@@ -9,15 +9,15 @@ receivers:
 
   - name: 'TelegramAndSms'
     webhook_configs:
-      - url: 'http://157.90.104.96:5000/webhook'
+      - url: 'http://host.docker.internal:5000/webhook'
         send_resolved: true
-    telegram_configs:
-      - bot_token: '7596665134:AAEeN9kn2imlPbiR8M6umgPOFq1bKdoRtUo'
-        api_url: "https://api.telegram.org"
-        chat_id: -1002376975407
-        parse_mode: 'MarkdownV2'
-        send_resolved: true
-        message: |
-          🚨 *Alert*: `{{ .CommonLabels.alertname }}`
-          *Instance*: `{{ .CommonLabels.instance }}`
-          *Status*: `{{ .Status | toUpper }}`
+#    telegram_configs:
+#      - bot_token: '7596665134:AAEeN9kn2imlPbiR8M6umgPOFq1bKdoRtUo'
+#        api_url: "https://api.telegram.org"
+#        chat_id: -1002376975407
+#        parse_mode: 'MarkdownV2'
+#        send_resolved: true
+#        message: |
+#          🚨 *Alert*: `{{ .CommonLabels.alertname }}`
+#          *Instance*: `{{ .CommonLabels.instance }}`
+#          *Status*: `{{ .Status | toUpper }}`

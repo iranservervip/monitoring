@@ -12,6 +12,7 @@ def webhook():
     instance = data.get("commonLabels", {}).get("instance", "UNKNOWN")
     status = data.get("status", "UNKNOWN").upper()
 
+#    receptor = "09353704931"
     receptor = "09354389143"
     template = "monitor1"
     params = {
