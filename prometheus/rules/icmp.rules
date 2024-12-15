@@ -4,7 +4,7 @@ groups:
 
   - alert: InstanceDown
     expr:  probe_success != 1
-    for: 10s
+    for: 1m
     labels:
       severity: critical
     annotations:
